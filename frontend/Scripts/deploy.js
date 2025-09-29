@@ -1,0 +1,21 @@
+const hre = require("hardhat");
+
+async function main() {
+    // Compile contracts if needed
+    await hre.run("compile");
+
+    // Deploy the Marketplace contract
+    const Marketplace = await hre.ethers.getContractFactory("Marketplace");
+    const marketplace = await Marketplace.deploy();
+
+    await marketplace.deployed();
+
+    console.log("Marketplace deployed to:", marketplace.address);
+}
+
+main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });
