@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini NFT Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Mini NFT Marketplace DApp</h1>
+
+    <button id="connectWallet">Connect Wallet</button>
+
+    <h2>Mint NFT</h2>
+    <input type="text" id="tokenURI" placeholder="NFT Metadata URL">
+    <input type="number" id="price" placeholder="Price in ETH">
+    <button id="mintNFT">Mint NFT</button>
+
+    <h2>NFTs for Sale</h2>
+    <div id="nftList"></div>
+</body>
+</html>
